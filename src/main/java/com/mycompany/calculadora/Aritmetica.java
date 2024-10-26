@@ -12,7 +12,7 @@ public class Aritmetica {
      
     /*Atributos*/
     
-    private float num1, num2;
+    private float num1, num2,resultado;
     
     public Aritmetica() {
     }
@@ -23,7 +23,7 @@ public class Aritmetica {
     }
 
     public float getNum1() {
-        return num1;
+        return this.num1;
     }
 
     public void setNum1(float num1) {
@@ -31,39 +31,71 @@ public class Aritmetica {
     }
 
     public float getNum2() {
-        return num2;
+        return this.num2;
     }
 
     public void setNum2(float num2) {
         this.num2 = num2;
     }
 
-    /*Metodols*/
+    /*Metodos*/
+        
+    public float suma(){
+        
+         resultado = num1 + num2;
+         
+        System.out.println("Resultado suma: " +
+                                                getNum1()+" + "+getNum2() + 
+                                                " = "+resultado);
+        
+        return resultado;
+        
+    }
     
-    public float suma(float num1 , float num2){
+    public float resta(){
         
-        return num1 + num2;
+        resultado = num1 - num2;
+         
+        System.out.println("Resultado resta: " +
+                                                getNum1()+" - "+getNum2() + 
+                                                " = "+resultado);
         
-    }
-    
-    public float resta(float num1 , float num2){
-        
-        return num1 - num2;
-        
-    }
-    public float mutiplicasion(float num1 , float num2){
-        
-        return num1 * num2;
+        return resultado;
         
     }
-    public float division(float num1 , float num2){
+    public float producto(){
         
-        return num1/num2;
+        resultado = num1 * num2;
+         
+        System.out.println("Resultado producto: " +
+                                                getNum1()+" * "+getNum2() + 
+                                                " = "+resultado);
+        
+        return resultado;
         
     }
-    public float modulo(float num1 , float num2){
+    public float division(){
         
-        return num1%num2;
+        resultado = num1 / num2;
+         
+        System.out.println("Resultado division: " +
+                                                getNum1()+" / "+getNum2() + 
+                                                " = "+resultado);
+        
+        
+        return resultado;
+        
+    }
+    public float modulo(){
+        
+         resultado = num1 % num2;
+         
+        System.out.println("Resultado modulo: " +
+                                                getNum1()+" % "+getNum2() + 
+                                                " = "+resultado);
+        
+        
+        return resultado;
         
     }
     

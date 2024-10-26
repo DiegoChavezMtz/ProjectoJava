@@ -13,27 +13,19 @@ public class Calculadora {
     public static void main(String[] args) {
         System.out.println("Bienvenido calculadora");
         
-        float num1 = 5;
-        float num2 = 6;
-        float resultadoSuma, 
-              resultadoResta, 
-              resultadoMultiplicasion,
-              resultadoDivision,
-              resultadoModulo;
+        float num1 = 6;
+        float num2 = 5;
         
-        Aritmetica ari = new Aritmetica();
+        Aritmetica ari = new Aritmetica(num1, num2);
         
-        resultadoSuma = ari.suma(num1, num2);
-        resultadoResta = ari.resta(num1, num2);
-        resultadoMultiplicasion = ari.mutiplicasion(num1, num2);
-        resultadoDivision = ari.division(num1, num2);
-        resultadoModulo = ari.modulo(num1, num2);
+        System.out.println("Se realizaran operaciones con los numeros "
+                            + ari.getNum1() +" y " + ari.getNum2());
         
-        System.out.println(resultadoSuma);
-        System.out.println(resultadoResta);
-        System.out.println(resultadoMultiplicasion);
-        System.out.println(resultadoDivision);
-        System.out.println(resultadoModulo);
+        ari.suma();
+        ari.resta();
+        ari.producto();
+        ari.division();
+        ari.modulo();
         
         
     }
