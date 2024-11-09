@@ -11,7 +11,7 @@ package com.mycompany.calculadora;
 public class Logica {
     /*Atributos*/
     
-    private boolean param1, param2;
+    private boolean param1, param2,res,res2;
     
     /*Constructores*/
     
@@ -44,15 +44,37 @@ public class Logica {
     
     /*Metodos*/
     
-    public void and(boolean param1 , boolean param2){
+    public boolean and(){
+
+        res = param1 & param2;
+
+        System.out.println("Para la operacion AND si el booleano 1 es " + getParam1() + " y el booleano 2 es " + getParam2() +
+                            " entonces el resultado es : " + res);
+
+        return res;
         
     }
     
-    public void or(boolean param1 , boolean param2){
+    public boolean or(){
+
+        res = param1 | param2;
+
+        System.out.println("Para la operacion OR  si el booleano 1 es " + getParam1() + " y el booleano 2 es " + getParam2() +
+                " entonces el resultado es : " + res);
+
+        return res;
         
     }
     
-    public void not(boolean param1 , boolean param2){
+    public void not(){
+
+        res = !getParam1();
+        res2 = !getParam2();
+
+        System.out.println("Para la operacion NOT  si el booleano 1 es " + getParam1() + " entonces negandolo seria  " + res);
+
+        System.out.println("Para la operacion NOT  si el booleano 2 es " + getParam2() + " entonces negandolo seria  " + res2);
+
         
     }
 
