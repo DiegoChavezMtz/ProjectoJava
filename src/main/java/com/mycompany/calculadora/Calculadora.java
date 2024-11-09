@@ -12,6 +12,8 @@ public class Calculadora {
 
     public static void main(String[] args) {
         System.out.println("Bienvenido calculadora");
+
+        MenuCalculadora menu = new MenuCalculadora();
         
         float num1 = 5;
         float num2 = 6;
@@ -28,6 +30,8 @@ public class Calculadora {
         resultadoMultiplicasion = ari.mutiplicasion(num1, num2);
         resultadoDivision = ari.division(num1, num2);
         resultadoModulo = ari.modulo(num1, num2);
+
+        menu.ejecutarMenuPrincipal();
         
         System.out.println(resultadoSuma);
         System.out.println(resultadoResta);
