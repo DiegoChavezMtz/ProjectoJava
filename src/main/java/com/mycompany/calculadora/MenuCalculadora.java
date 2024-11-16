@@ -4,15 +4,17 @@ import java.util.Scanner;
 
 public class MenuCalculadora {
 
+    Mensajes mensajes = new Mensajes();
+    Scanner sc = new Scanner(System.in);
 
     public MenuCalculadora() {
     }
 
     //Métodos
 
+
     public void ejecutarMenuPrincipal(){
 
-        Scanner sc = new Scanner(System.in);
         int indicador;
 
         do{
@@ -46,8 +48,7 @@ public class MenuCalculadora {
 
         Aritmetica aritmetica = new Aritmetica();
 
-        Scanner sc = new Scanner(System.in);
-        int indicador;
+        int indicador,submenu;
 
         do{
             System.out.println("\nMenu Aritmetica");
@@ -64,22 +65,54 @@ public class MenuCalculadora {
 
             switch (indicador){
                 case 1:
-                    aritmetica.suma();
+
+                    do{
+                        aritmetica.suma();
+                        submenu = mensajes.repeticion();
+
+                    }while(submenu != 0);
+
                     break;
                 case 2:
-                    aritmetica.resta();
+
+                    do {
+                        aritmetica.resta();
+                        submenu = mensajes.repeticion();
+
+                    }while(submenu != 0);
+
                     break;
                 case 3:
-                    aritmetica.producto();
+                    do {
+                        aritmetica.producto();
+                        submenu = mensajes.repeticion();
+
+                    }while(submenu != 0);
+
                     break;
                 case 4:
-                    aritmetica.division();
+                    do {
+                        aritmetica.division();
+                        submenu = mensajes.repeticion();
+
+                    }while(submenu != 0);
+
                     break;
                 case 5:
-                    aritmetica.modulo();
+                    do {
+                        aritmetica.modulo();
+                        submenu = mensajes.repeticion();
+
+                    }while(submenu != 0);
+
                     break;
                 case 6:
-                    aritmetica.tablasMultiplicar();
+                    do {
+                        aritmetica.tablasMultiplicar();
+                        submenu = mensajes.repeticion();
+
+                    }while(submenu != 0);
+
                     break;
             }
 
@@ -89,7 +122,6 @@ public class MenuCalculadora {
 
     public  void menuRelacional(){
 
-        Scanner sc = new Scanner(System.in);
         int indicador;
 
         do{
@@ -111,7 +143,6 @@ public class MenuCalculadora {
 
     public void menuLogica(){
 
-        Scanner sc = new Scanner(System.in);
         int indicador;
         do{
             System.out.println("\nMenu Logica");

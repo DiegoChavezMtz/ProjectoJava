@@ -145,11 +145,44 @@ public class Aritmetica {
         int[][] resultadosTablas = new int[10][10];
 
         for (int i = 0; i < 10; i++) {
-            System.out.print(i+1 + "->   ");
+
+            if(i == 0){
+
+                System.out.print("        ");
+
+                for (int j = 0; j < 10; j++) {
+
+                    System.out.print(" " + (j+1) + "  ");
+                }
+                System.out.println(" ");
+
+                System.out.print("        ");
+
+                for (int j = 0; j < 10; j++) {
+
+                    System.out.print(" " + "^" + "  ");
+                }
+                System.out.println(" ");
+            }
+
+            if(i<9){
+                System.out.print(i+1 + " ->   |");
+            }else {
+                System.out.print(i+1 + "->   |");
+            }
+
             for (int j = 0; j < 10; j++) {
+
                 resultadosTablas[i][j] = (i+1) * (j+1);
 
-                System.out.print("|" + resultadosTablas[i][j] + "|");
+                if(resultadosTablas[i][j] < 10){
+                    System.out.print(" " + resultadosTablas[i][j] + " |");
+                } else if (resultadosTablas[i][j] < 100) {
+                    System.out.print(resultadosTablas[i][j] + " |");
+                }else {
+                    System.out.print(resultadosTablas[i][j] + "|");
+                }
+
             }
             System.out.println(" ");
         }
