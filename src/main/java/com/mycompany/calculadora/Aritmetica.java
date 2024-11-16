@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.calculadora;
+import java.util.Scanner;
 
 /**
  *
@@ -11,92 +12,150 @@ package com.mycompany.calculadora;
 public class Aritmetica {
      
     /*Atributos*/
-    
-    private float num1, num2,resultado;
+
     
     public Aritmetica() {
+
     }
 
-    public Aritmetica(float num1, float num2) {
-        this.num1 = num1;
-        this.num2 = num2;
-    }
-
-    public float getNum1() {
-        return this.num1;
-    }
-
-    public void setNum1(float num1) {
-        this.num1 = num1;
-    }
-
-    public float getNum2() {
-        return this.num2;
-    }
-
-    public void setNum2(float num2) {
-        this.num2 = num2;
-    }
 
     /*Metodos*/
         
     public float suma(){
-        
-         resultado = num1 + num2;
-         
-        System.out.println("Resultado suma: " +
-                                                getNum1()+" + "+getNum2() + 
-                                                " = "+resultado);
+
+        Scanner sc = new Scanner(System.in);
+
+        float num1, num2,resultado;
+
+        System.out.println("Digite el primer numero a sumar: ");
+        num1 = sc.nextFloat();
+        System.out.println("Digite el segundo numero a sumar: ");
+        num2 = sc.nextFloat();
+
+        resultado = num1 + num2;
+
+        System.out.println("El resultado de la suma: " +  num1 + " + "+num2 + " = " + resultado);
         
         return resultado;
         
     }
     
     public float resta(){
-        
+
+        Scanner sc = new Scanner(System.in);
+
+        float num1, num2,resultado;
+
+        System.out.println("Digite el primer numero a restar: ");
+        num1 = sc.nextFloat();
+        System.out.println("Digite el segundo numero a restar: ");
+        num2 = sc.nextFloat();
+
         resultado = num1 - num2;
-         
-        System.out.println("Resultado resta: " +
-                                                getNum1()+" - "+getNum2() + 
-                                                " = "+resultado);
+
+        System.out.println("Resultado resta: " + num1 + " - " +num2 + " = "+resultado);
         
         return resultado;
         
     }
     public float producto(){
-        
+
+        Scanner sc = new Scanner(System.in);
+
+        float num1, num2,resultado;
+
+        System.out.println("Digite el primer numero a multiplicar: ");
+        num1 = sc.nextFloat();
+        System.out.println("Digite el segundo numero a multiplicar: ");
+        num2 = sc.nextFloat();
+
         resultado = num1 * num2;
          
-        System.out.println("Resultado producto: " +
-                                                getNum1()+" * "+getNum2() + 
-                                                " = "+resultado);
+        System.out.println("Resultado producto: " + num1 + " * " + num2 +  " = " +resultado);
         
         return resultado;
         
     }
     public float division(){
-        
+
+        Scanner sc = new Scanner(System.in);
+
+        float num1, num2,resultado;
+        int flag = 0;
+
+        System.out.println("Digite el primer numero a dividir: ");
+        num1 = sc.nextFloat();
+
+        do{
+
+            System.out.println("Digite el segundo numero a dividir: ");
+            num2 = sc.nextFloat();
+
+            if(num2 != 0){
+                flag = 1;
+            }else {
+                System.out.println("El número 0 no es valido para una division ");
+            }
+
+        }while(flag == 0);
+
         resultado = num1 / num2;
-         
-        System.out.println("Resultado division: " +
-                                                getNum1()+" / "+getNum2() + 
-                                                " = "+resultado);
+
+        System.out.println("Resultado division: " + num1 +" / "+ num2 + " = "+resultado);
         
         
         return resultado;
         
     }
+
     public float modulo(){
-        
-         resultado = num1 % num2;
+
+        Scanner sc = new Scanner(System.in);
+
+        float num1, num2,resultado;
+        int flag = 0;
+
+        System.out.println("Digite el primer numero a dividir: ");
+        num1 = sc.nextFloat();
+
+        do{
+
+            System.out.println("Digite el segundo numero a dividir: ");
+            num2 = sc.nextFloat();
+
+            if(num2 != 0){
+                flag = 1;
+            }else {
+                System.out.println("El número 0 no es valido para una division ");
+            }
+
+        }while(flag == 0);
+
+        resultado = num1 % num2;
          
-        System.out.println("Resultado modulo: " +
-                                                getNum1()+" % "+getNum2() + 
-                                                " = "+resultado);
+        System.out.println("Resultado modulo: " + num1 +" % "+ num2 + " = " + resultado);
         
         
         return resultado;
         
+    }
+
+    public int[][] tablasMultiplicar(){
+
+        int[][] resultadosTablas = new int[10][10];
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i+1 + "->   ");
+            for (int j = 0; j < 10; j++) {
+                resultadosTablas[i][j] = (i+1) * (j+1);
+
+                System.out.print("|" + resultadosTablas[i][j] + "|");
+            }
+            System.out.println(" ");
+        }
+
+        return resultadosTablas;
+
     }
     
 }
